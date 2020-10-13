@@ -8,7 +8,7 @@ class Thing(models.Model):
     sum_ = models.IntegerField(null=True)
 
     def calculate_sum(self):
-        print(f'Calculating: {self.a} + {self.b}.')
+        print('Calculating: {} + {}.'.format(self.a, self.b))
         self.sum_ = self.a + self.b
-        print(f'Sum: {self.sum_}.')
+        print('Sum: {}.'.format(self.sum_))
         self.save()
